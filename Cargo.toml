@@ -1,0 +1,14 @@
+[workspace]
+resolver = "2"
+members = ["crates/helio-mc-core", "crates/helio-mc"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.99"
+license = "MIT"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
